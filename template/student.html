@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title> get and add data </title>
+    </head>
+    <style>
+
+      .main-heading{
+        text-align: center;
+        padding: 15px 0;
+      }
+
+      .student-form{
+        /*border: 1px solid red;*/   /*comment in css*/
+        text-align: center;
+      }
+
+      .student-form input{
+        margin :  5px;
+        height :  30px;
+        width  :  500px;
+        
+
+      }
+
+      .student-form button{
+
+        height : 20px;
+      }
+      
+
+    </style>
+    <body>
+
+        <h1 class="main-heading"> Student Entry Form </h1>    <!-- comment in html --> 
+        
+        <form class="student-form" action="/User_Info/get-add-data/" method="post" >
+        
+            {% csrf_token %}                                                          <!-- cross side request forgeri -->
+            <h3> Fill This Form To Add Student </h3>
+
+            <input type ="text" placeholder="Enter the first name" name="first_name"> <br>
+            <input type ="text" placeholder="Enter the last name" name="last_name"> <br>
+            <input type ="text" placeholder="Enter the address" name="address"> <br>
+            <input type ="number" placeholder="Enter the contact number" name="contact_number"> <br>
+
+            <button type="submit">submit</button>
+        
+
+        </form>
+    </body>
+</html>

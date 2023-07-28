@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title> get and add data </title>
+    </head>
+
+    <style>
+        .main-heading{
+            text-align: center;
+            padding: 15px 0;
+        }
+
+      .teacher-form{
+        /*border: 1px solid red;*/   /*comment in css*/
+        text-align: center;
+      }
+
+      .teacher-form input{
+        margin :  5px;
+        height :  30px;
+        width  :  500px;
+        
+
+      }
+
+      .teacher-form button{
+
+        height : 30px;
+      }
+         
+
+
+
+
+
+
+
+
+    </style>
+    <body>
+
+        <h3 class = "main-heading"> TEACHER ENTRY FORM </h3>
+        <form class="teacher-form" action ="/User_Info/teacher-get-data/" method = "post">
+            
+            {% csrf_token %}
+            
+            <h4> FILL THIS FORM TO ADD TEACHER DATA </h4>
+
+
+            <input type="text" placeholder="Enter the last_name" name="last_name"> <br>
+            <input type="number" placeholder="Enter the age" name="age"> <br>
+            <input type="text" placeholder="Enter the qualification" name="qualification "> <br>
+            <input type="text" placeholder="Enter the blood_group" name="blood_group"> <br>
+            <input type="text" placeholder="Enter the married_status" name="married_status"> <br>
+            <input type="text" placeholder="Enter the gender" name="gender"> <br>
+
+            <button type="submit">submit</button>
+
+        </form>
+        
+
+    </body>
+</html>
